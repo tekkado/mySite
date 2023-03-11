@@ -10,7 +10,7 @@ const About = () => {
   return (
     <div name="about" className="w-full h-screen bg-[#03547b] text-white">
       {/* Container */}
-      <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
+      <div className="max-w-[1000px] mx-auto px-4 flex flex-col justify-center h-full">
         <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
           <div className="sm:text-right pb-5 pl-4">
             <p className="text-4xl font-bold inline border-b-4 border-[#ffde3b]">
