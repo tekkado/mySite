@@ -3,9 +3,9 @@
   "name": "Minal's Portfolio Website",
   "icons": [
     {
-      "src": "t_logotransparent.png",
+      "src": "t_logo.ico",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/png"
+      "type": "image/x-icon"
     },
     {
       "src": "t_logotransparent.png",
@@ -21,5 +21,5 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#03547b"
+  "background_color": "#ffffff"
 }
