@@ -33,7 +33,7 @@ const About = () => {
               <br/>
               <br/>
               As a versatile and adaptable learner, I'm seeking Software
-              Engineer/Developer Intern roles where I can contribute my
+              Engineer/Developer New Grad roles where I can contribute my
               creativity, passion, and technical expertise to an exciting
               project or team. Feel free to explore my website and get in touch
               if you have any questions or opportunities to discuss!
