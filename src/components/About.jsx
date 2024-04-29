@@ -26,17 +26,23 @@ const About = () => {
           </div>
           <div className="pr-6">
             <p ref={ref} className={`fade-in ${inView ? "is-visible" : ""}`}>
-              Hi, I'm currently studying the Design and Analysis of Algorithms
-              while also exploring Full Stack Web Development in my free time.
-              When I'm not coding, I enjoy creating my own projects, playing
-              sports with friends, and unwinding with video games. 
-              <br/>
-              <br/>
+              I have a strong passion for creating things, whether they're
+              crafted for my own interests or designed to aid others in
+              achieving their goals. I find immense satisfaction in helping
+              people or contributing to meaningful projects and it has been my
+              driving force since day one.
+              <br />I primarily enjoy coding with Javascript due to it's
+              versatility but also have experience with languages such as C#, C,
+              Java, MySQL, along with frameworks like Springboot, .Net, React
+              and more.
+              <br />
+              <br />
               As a versatile and adaptable learner, I'm seeking Software
               Engineer/Developer New Grad roles where I can contribute my
               creativity, passion, and technical expertise to an exciting
               project or team. Feel free to explore my website and get in touch
-              if you have any questions or opportunities to discuss!
+              through the contact page if you have any questions or
+              opportunities to discuss!
             </p>
           </div>
         </div>

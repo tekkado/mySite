@@ -11,7 +11,7 @@ const Home = () => {
           Shams Minal Rahman
         </h1>
         <h2 className="text-xl sm:text-4xl font-bold text-[#dae2e6] py-1">
-          I'm a Computer Science student at York University.
+          I'm a Computer Science Graduate from York University.
         </h2>
         <p className="text-[#dae2e6] py-4 max-w-[700px]">
           Welcome to my website! I use this site to continuously work and
