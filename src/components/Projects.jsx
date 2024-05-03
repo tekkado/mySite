@@ -21,8 +21,12 @@ const Projects = () => {
         {projects.map((project, index) => (
             <a
               key={index}
+              href="#"
               className="relative cursor-pointer group block"
-              onClick={() => handleTileClick(project.deployed || project.github)}
+              onClick={(e) => {
+                e.preventDefault(); // Prevent default behavior
+                handleTileClick(project.deployed || project.github);
+              }}
             >
               <div className="shadow-md hover:scale-110 duration-200 w-full h-full">
                 <img
@@ -39,7 +43,7 @@ const Projects = () => {
           ))}
         </div>
       </div>
-      
+
     </div>
   );
 };
