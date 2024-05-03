@@ -43,8 +43,8 @@ const Skills = () => {
             <img className="w-16 mt-1 mx-auto" src={Node} alt="Node Icon" />
             <p className="my-4">NodeJS</p>
           </div>
-          
         </div>
+
       </div>
     </div>
   );
