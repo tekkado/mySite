@@ -19,14 +19,10 @@ const Projects = () => {
 
         <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-4 text-center py-8">
         {projects.map((project, index) => (
-            <a
+            <div
               key={index}
-              href="#"
               className="relative cursor-pointer group block"
-              onClick={(e) => {
-                e.preventDefault(); // Prevent default behavior
-                handleTileClick(project.deployed || project.github);
-              }}
+              onClick={() => handleTileClick(project.deployed || project.github)}
             >
               <div className="shadow-md hover:scale-110 duration-200 w-full h-full">
                 <img
@@ -39,11 +35,11 @@ const Projects = () => {
                   <p className="text-sm">{project.description}</p>
                 </div>
               </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>
-
+      
     </div>
   );
 };
