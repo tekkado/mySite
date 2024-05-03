@@ -32,6 +32,11 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
+          <Link to="projects" smooth={true} duration={500}>
+            Projects
+          </Link>
+        </li>
+        <li>
           <Link to="contact" smooth={true} duration={500}>
             Contact
           </Link>
@@ -44,19 +49,43 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      <ul className={!nav ? "hidden" : "absolute top-0 left-0 w-full h-screen bg-[#03547b] flex flex-col justify-center items-center"}>
-        <li className="py-6 text-4xl"><Link onClick={handleClick} to="homepage" smooth={true} duration={500}>
+      <ul
+        className={
+          !nav
+            ? "hidden"
+            : "absolute top-0 left-0 w-full h-screen bg-[#03547b] flex flex-col justify-center items-center"
+        }
+      >
+        <li className="py-6 text-4xl">
+          <Link
+            onClick={handleClick}
+            to="homepage"
+            smooth={true}
+            duration={500}
+          >
             Home
-          </Link></li>
-        <li className="py-6 text-4xl"><Link onClick={handleClick} to="about" smooth={true} duration={500}>
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link onClick={handleClick} to="about" smooth={true} duration={500}>
             About
-          </Link></li>
-        <li className="py-6 text-4xl"><Link onClick={handleClick} to="skills" smooth={true} duration={500}>
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link onClick={handleClick} to="skills" smooth={true} duration={500}>
             Skills
-          </Link></li>
-        <li className="py-6 text-4xl"><Link onClick={handleClick} to="contact" smooth={true} duration={500}>
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link onClick={handleClick} to="Projects" smooth={true} duration={500}>
+            Projects
+          </Link>
+        </li>
+        <li className="py-6 text-4xl">
+          <Link onClick={handleClick} to="contact" smooth={true} duration={500}>
             Contact
-          </Link></li>
+          </Link>
+        </li>
       </ul>
     </div>
   );
