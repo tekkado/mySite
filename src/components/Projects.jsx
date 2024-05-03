@@ -30,9 +30,9 @@ const Projects = () => {
                   src={project.image}
                   alt={project.title}
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center">
-                  <h3 className="text-xl font-semibold">{project.title}</h3>
-                  <p className="text-sm">{project.description}</p>
+                <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center rounded-lg">
+                  <h3 className="text-xl font-semibold text-white text-black">{project.title}</h3>
+                  <p className="text-sm text-white text-black">{project.description}</p>
                 </div>
               </div>
             </div>
