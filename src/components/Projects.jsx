@@ -2,9 +2,9 @@ import React from "react";
 import { projects } from "../data/projectsData";
 import { handleTileClick } from "../utils/handleTileClick";
 
-const Projects = () => {
+const Projects = ({ nav }) => {
   return (
-    <div name="projects" className="w-full h-screen bg-[#03547b] text-white">
+    <div name="projects" className={`w-full h-screen bg-[#03547b] text-white ${nav ? 'hidden' : ''}`}>
 
       {/* Container */}
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">

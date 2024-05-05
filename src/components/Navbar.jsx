@@ -3,8 +3,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from 'react-scroll';
 import Logo from "../assets/t_logotransparent.png";
 
-const Navbar = () => {
-  const [nav, setNav] = useState(false);
+const Navbar = ({ nav, setNav }) => {
   const handleClick = () => setNav(!nav);
 
   return (
@@ -58,7 +57,7 @@ const Navbar = () => {
       >
         <li className="py-6 text-4xl">
           <Link
-            onClick={handleClick}
+            onClick={() => setNav(false)}
             to="homepage"
             smooth={true}
             duration={500}
@@ -67,22 +66,22 @@ const Navbar = () => {
           </Link>
         </li>
         <li className="py-6 text-4xl">
-          <Link onClick={handleClick} to="about" smooth={true} duration={500}>
+          <Link onClick={() => setNav(false)} to="about" smooth={true} duration={500}>
             About
           </Link>
         </li>
         <li className="py-6 text-4xl">
-          <Link onClick={handleClick} to="skills" smooth={true} duration={500}>
+          <Link onClick={() => setNav(false)} to="skills" smooth={true} duration={500}>
             Skills
           </Link>
         </li>
         <li className="py-6 text-4xl">
-          <Link onClick={handleClick} to="projects" smooth={true} duration={500}>
+          <Link onClick={() => setNav(false)} to="projects" smooth={true} duration={500}>
             Projects
           </Link>
         </li>
         <li className="py-6 text-4xl">
-          <Link onClick={handleClick} to="contact" smooth={true} duration={500}>
+          <Link onClick={() => setNav(false)} to="contact" smooth={true} duration={500}>
             Contact
           </Link>
         </li>
