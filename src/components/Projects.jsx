@@ -4,7 +4,7 @@ import { handleTileClick } from "../utils/handleTileClick";
 
 const Projects = ({ nav }) => {
   return (
-    <div name="projects" className={`w-full h-screen bg-[#03547b] text-white ${nav ? 'hidden' : ''}`}>
+    <div name="projects" className={`w-full h-screen bg-[#03547b] text-white`}>
 
       {/* Container */}
       <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full">
@@ -17,7 +17,7 @@ const Projects = ({ nav }) => {
           </p>
         </div>
 
-        <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-4 text-center py-8">
+        <div className={`w-full grid grid-cols-2 sm:grid-cols-3 gap-4 text-center py-8 ${nav ? 'hidden' : ''}`}>
         {projects.map((project, index) => (
             <div
               key={index}
