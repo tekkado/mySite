@@ -18,8 +18,8 @@ export type SectionDef = {
 export const SECTIONS: SectionDef[] = [
   { id: "about", title: "About", Component: About, inNav: true },
   { id: "experience", title: "Experience", Component: Experience, inNav: true },
-  { id: "projects", title: "Projects", Component: Projects, inNav: true },
   { id: "skills", title: "Skills", Component: Skills, inNav: false },
+  { id: "projects", title: "Projects", Component: Projects, inNav: true },
   { id: "contact", title: "Contact", Component: Contact, inNav: true },
 ];
 
