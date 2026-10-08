@@ -15,10 +15,11 @@ export default {
         muted: token("muted"),
         line: token("line"),
         accent: token("accent"),
+        pass: token("pass"),
+        skip: token("skip"),
       },
       fontFamily: {
         sans: ['"Inter Variable"', ...defaultTheme.fontFamily.sans],
-        serif: ['"Instrument Serif"', "Georgia", ...defaultTheme.fontFamily.serif],
       },
     },
   },

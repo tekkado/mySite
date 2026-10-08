@@ -18,7 +18,7 @@ describe("site content", () => {
     expect(unique(skills.map((g) => g.label))).toBe(true);
     for (const job of experience) {
       expect(unique(job.roles.map((r) => r.title))).toBe(true);
-      expect(unique(job.highlights)).toBe(true);
+      expect(unique(job.highlights.map((h) => h.text))).toBe(true);
     }
   });
 

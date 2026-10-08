@@ -12,7 +12,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-20 border-b border-line/60 bg-bg/80 backdrop-blur">
       <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-x-4 px-6">
-        <a href="#top" className="flex h-14 items-center font-serif text-xl sm:h-16">
+        <a href="#top" className="flex h-14 items-center font-semibold tracking-tight sm:h-16">
           {profile.name.split(" ").slice(-2).join(" ")}
         </a>
 
@@ -24,7 +24,7 @@ export default function Header() {
                 <a
                   href={`#${item.id}`}
                   aria-current={active === item.id ? "true" : undefined}
-                  className="flex h-10 items-center justify-center whitespace-nowrap rounded-full px-1 text-muted transition-colors hover:text-fg aria-[current]:bg-fg/5 aria-[current]:text-fg sm:h-auto sm:px-3 sm:py-1.5"
+                  className="flex h-10 items-center justify-center whitespace-nowrap rounded-md px-1 text-muted transition-colors hover:text-fg aria-[current]:bg-fg/5 aria-[current]:text-fg sm:h-auto sm:px-3 sm:py-1.5"
                 >
                   {item.title}
                 </a>

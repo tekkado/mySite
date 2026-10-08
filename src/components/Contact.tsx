@@ -34,16 +34,16 @@ export default function Contact(props: SectionProps) {
   }
 
   const field =
-    "w-full rounded-xl border border-line bg-surface px-4 py-3 placeholder:text-muted/70 focus:border-accent focus:outline-none";
+    "w-full rounded-md border border-line bg-surface px-4 py-3 placeholder:text-muted/70 focus:border-accent focus:outline-none";
 
   return (
-    <Section {...props}>
+    <Section {...props} meta="open">
       <p className="max-w-xl text-lg leading-relaxed">
-        I'm always happy to talk about agents, product engineering, or anything you're building. Email me at{" "}
+        The fastest way to reach me is email at{" "}
         <a href={`mailto:${profile.email}`} className="link">
           {profile.email}
         </a>{" "}
-        or drop a note below.
+        or you can leave a note below.
       </p>
 
       <form onSubmit={handleSubmit} className="mt-10 grid max-w-xl gap-4 sm:grid-cols-2">
@@ -70,7 +70,7 @@ export default function Contact(props: SectionProps) {
             {status === "sending" ? "Sending…" : "Send message"}
           </button>
           <p role="status" className="text-sm text-muted">
-            {status === "sent" && "Thanks — I'll get back to you soon."}
+            {status === "sent" && "Thanks, your message was sent. I'll reply by email."}
             {status === "error" && `Something went wrong. Please email me directly instead.`}
           </p>
         </div>

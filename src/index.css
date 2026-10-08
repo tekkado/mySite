@@ -4,22 +4,26 @@
 
 @layer base {
   :root {
-    --bg: 250 249 246;
+    --bg: 251 251 250;
     --surface: 255 255 255;
-    --fg: 24 24 23;
-    --muted: 98 98 94;
-    --line: 228 225 218;
+    --fg: 23 23 22;
+    --muted: 94 94 90;
+    --line: 229 229 226;
     --accent: 3 84 123;
+    --pass: 21 128 61;
+    --skip: 161 98 7;
     color-scheme: light;
   }
 
   .dark {
-    --bg: 18 18 17;
-    --surface: 28 28 26;
+    --bg: 17 17 16;
+    --surface: 26 26 24;
     --fg: 236 236 233;
     --muted: 160 160 155;
     --line: 46 46 43;
     --accent: 124 184 224;
+    --pass: 110 200 140;
+    --skip: 230 175 90;
     color-scheme: dark;
   }
 
@@ -46,7 +50,7 @@
   }
 
   .btn {
-    @apply inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-medium transition-colors;
+    @apply inline-flex items-center gap-2 rounded-md border px-4 py-2 text-sm font-medium transition-colors;
   }
 
   .btn-primary {
@@ -57,27 +61,14 @@
     @apply btn border-line hover:border-fg;
   }
 
-  .tag {
-    @apply rounded-full border border-line px-2.5 py-0.5 text-xs text-muted;
+  .mono-list {
+    @apply font-mono text-xs text-muted;
   }
 }
 
 .theme-switching,
 .theme-switching * {
   transition: none !important;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .rise {
-    animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-  }
-
-  @keyframes rise {
-    from {
-      opacity: 0;
-      transform: translateY(12px);
-    }
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
