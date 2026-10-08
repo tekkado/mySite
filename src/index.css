@@ -3,52 +3,85 @@
 @tailwind utilities;
 
 @layer base {
-  * {
-    flex-direction: row;
+  :root {
+    --bg: 250 249 246;
+    --surface: 255 255 255;
+    --fg: 24 24 23;
+    --muted: 98 98 94;
+    --line: 228 225 218;
+    --accent: 3 84 123;
+    color-scheme: light;
+  }
+
+  .dark {
+    --bg: 18 18 17;
+    --surface: 28 28 26;
+    --fg: 236 236 233;
+    --muted: 160 160 155;
+    --line: 46 46 43;
+    --accent: 124 184 224;
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 
   body {
-    @apply font-sans;
+    @apply bg-bg font-sans text-fg antialiased;
   }
 
-  li {
-    @apply px-4;
-    @apply cursor-pointer;
+  ::selection {
+    @apply bg-accent/20;
   }
 
-  .fade-in {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
+  :focus-visible {
+    @apply rounded-sm outline outline-2 outline-offset-2 outline-accent;
+  }
+}
+
+@layer components {
+  .link {
+    @apply underline decoration-line decoration-1 underline-offset-4 transition-colors hover:text-accent hover:decoration-accent;
   }
 
-  .is-visible {
-    opacity: 1;
+  .btn {
+    @apply inline-flex items-center gap-2 rounded-full border px-5 py-2.5 text-sm font-medium transition-colors;
   }
 
-  .button {
-    color: #fff;
-    border-radius: 20px;
-    border-width: 2px;
-    padding: 6px 12px;
-    margin-top: 8px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.2s ease;
+  .btn-primary {
+    @apply btn border-fg bg-fg text-bg hover:border-accent hover:bg-accent;
   }
 
-  .button:hover {
-    background-color: #ffde3b;
-    color: #0a192f;
-    border-color: #068bc7;
+  .btn-ghost {
+    @apply btn border-line hover:border-fg;
   }
 
-  @keyframes fadeIn {
-    0% {
+  .tag {
+    @apply rounded-full border border-line px-2.5 py-0.5 text-xs text-muted;
+  }
+}
+
+.theme-switching,
+.theme-switching * {
+  transition: none !important;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .rise {
+    animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  }
+
+  @keyframes rise {
+    from {
       opacity: 0;
+      transform: translateY(12px);
     }
-    100% {
-      opacity: 1;
-    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
